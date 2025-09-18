@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DOCX Preview Local</title>
+    <style>
+      #main {
+        /* border: 1px solid #ccc; */
+        padding: 20px;
+        /* max-width: 600px; */
+        margin: auto;
+      }
+      .docxPreview__main {
+        /* border: 1px solid #ccc; */
+        padding: 20px;
+        /* max-width: 600px; */
+        margin: auto;
+      }
+      .container {
+        display: flex;
+        gap: 20px;
+      }
+      .docxPreview__container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+      }
+      .docxPreview__title {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Upload DOCX file</h2>
+    <input type="file" id="upload" accept=".docx" />
+    <div class="docxPreview__main">
+      <div class="docxPreview__container">
+        <div class="docxPreview__sampleContainer">
+          <h3 class="docxPreview__title">Sample DOCX</h3>
+          <div id="docxPreview__sample"></div>
+        </div>
+        <div class="docxPreview__previewContainer">
+          <h3 class="docxPreview__title">Preview DOCX</h3>
+          <div id="docxPreview__preview"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./libs/jszip/jszip.min.js"></script>
+    <script src="./libs/docx-preview/docx-preview.min.js"></script>
+    <script src="./calculate.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
