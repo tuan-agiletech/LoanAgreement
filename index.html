@@ -31,11 +31,35 @@
         font-weight: bold;
         padding: 20px 0;
       }
+      .docx {
+        box-shadow: none !important;
+        margin-bottom: 0 !important;
+      }
+      .docx-wrapper {
+        padding-bottom: 30px !important;
+      }
+      .input-container {
+        display: flex;
+        gap: 200px;
+        justify-content: center;
+        margin-top: 20px;
+      }
     </style>
   </head>
   <body>
-    <h2>Upload DOCX file</h2>
-    <input type="file" id="upload" accept=".docx" />
+    <div class="input-container">
+      <div>
+        <h2>Upload DOCX file</h2>
+        <input type="file" id="upload-docx" accept=".docx" />
+      </div>
+      <div>
+        <h2>Upload JSON file</h2>
+        <input type="file" id="upload-json" accept=".json" />
+      </div>
+    </div>
+    <div style="margin-top: 40px; text-align: center">
+      <button id="submitFiles">Submit</button>
+    </div>
     <div class="docxPreview__main">
       <div class="docxPreview__container">
         <div class="docxPreview__sampleContainer">
@@ -51,7 +75,10 @@
 
     <script src="./libs/jszip/jszip.min.js"></script>
     <script src="./libs/docx-preview/docx-preview.min.js"></script>
+    <script src="./constant.js"></script>
     <script src="./calculate.js"></script>
+    <script src="./rule.js"></script>
+    <script src="./mapping.js"></script>
     <script src="./main.js"></script>
   </body>
 </html>

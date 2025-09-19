@@ -29,3 +29,5 @@ const loanPurpose01 = "[LOAN PURPOSE 01]";
 const loanPurpose02 = "[LOAN PURPOSE 02]";
 const defaultInterestRate01 = "[DEFAULT INTEREST RATE 01]";
 const specialCondition01 = "[SPECIAL CONDITION 01]";
+const important01 = "[IMPORTANT 01]"
+const borrowerNameSign = "[Borrower Name]"

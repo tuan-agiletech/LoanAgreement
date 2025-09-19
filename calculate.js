@@ -149,29 +149,4 @@ const getReferralAmount = (value) => (salesChannelValue(value)?.Commission ?? []
 const getReferralName = (value) => (salesChannelValue(value)?.Commission ?? []).some((commission) => commission?.["@ThirdPartyReferee"].toLowerCase() === "yes") ? salesChannelValue?.Company?.["@CompanyName"] ?? "" : "";
 const getSpecialCondPrior = (value) => (overviewValue(value)?.TermsAndConditions ?? []).filter((term) => term?.["@TermsName"].toLowerCase() === "pre settlement").map((term) => term?.["@TermsDescription"] ?? "");
 const getSpecialCondDuring = (value) => (overviewValue(value)?.TermsAndConditions ?? []).filter((term) => term?.["@TermsName"].toLowerCase() !== "pre settlement").map((term) => term?.["@TermsDescription"] ?? "");
-
-// Export
-window.getBorrowerName = getBorrowerName;
-window.getDisclosureDate = getCurrentDate;
-window.getLoanAmount = getLoanAmount;
-window.getVariableRate = getVariableRate;
-window.getEstablishmentFee = getEstablishmentFee;
-window.getValuationFee = getValuationFee;
-window.getTotalFees = getTotalFees;
-window.getTotalAndChargesFee = getTotalAndChargesFee;
-window.getInitialValue = getInitialValue;
-window.getDefPayRate = getDefPayRate;
-window.getFirstMortgagor = getFirstMortgagor;
-window.getSecondMortgagor = getSecondMortgagor;
-window.getFirstMortgagorValue = getFirstMortgagorValue;
-window.getSecondMortgagorValue = getSecondMortgagorValue;
-window.getPrimaryLoanAmount = getPrimaryLoanAmount;
-window.getPrimaryLender = getPrimaryLender;
-window.getLoanPurposeCode = getLoanPurposeCode;
-window.getLoanPurpose = getLoanPurpose;
-window.getDisbursements = getDisbursements;
-window.getDefaultRate = getDefaultRate;
-window.getReferralAmount = getReferralAmount;
-window.getReferralName = getReferralName;
-window.getSpecialCondPrior = getSpecialCondPrior;
-window.getSpecialCondDuring = getSpecialCondDuring;
+const getFeeValue = (value) => [getEstablishmentFee(value), getValuationFee(value), getTotalFees(value), getTotalAndChargesFee(value)];

@@ -1,5 +1,3 @@
-;
-
 var signSetting = {
   "AnchorPrefix": "eSign",
   "SignerPrefix": "Signer",
