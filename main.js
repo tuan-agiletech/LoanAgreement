@@ -32,7 +32,7 @@ const handleMapping = (value, code, el) => {
       el.style.fontWeight = "normal";
       const fee = getFeeValue(value)[totalFeeValueCount];
       totalFeeValueCount += 1;
-      el.textContent = formatValue(handleInputRtn(fee) || "", el);
+      el.textContent = formatValue(fee || "", el);
       break;
     }
     case security01: {
